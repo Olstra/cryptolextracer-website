@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo-cryptolextracer-white_bg.jpeg";
+import logo from "../../assets/logo-cryptolextracer-white.png";
 import styles from "./Header.module.sass";
 
 const makeClass = (isActive: boolean) =>

@@ -5,7 +5,7 @@ export const NODE_TAG_MAPPING: Record<string, string> = {
   attribution: "(process step) attribution",
   "legal-action": "(process step) evidence management",
   prevention: "(process step) prevention",
-  "all-in-one-tools": "(process step) all in one tools",
+  "all-in-one-tools": "(process step) all-in-one tools",
   // tracing methods
   "rule-based": "(method) rule-based",
   clustering: "(method) clustering",

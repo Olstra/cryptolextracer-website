@@ -11,7 +11,8 @@ $background-color: $uzh-blue
   display: flex
   align-items: center
   justify-content: space-between
-  padding: $padding $padding 0 $padding
+  padding: 0 $padding
+  height: 80px
   background: $background-color
   border-bottom: 1px solid #e6e6e6
   position: sticky
@@ -22,44 +23,40 @@ $background-color: $uzh-blue
   background: $background-color
   display: flex
   align-items: center
-  padding-left: 1em
+  gap: 1em
   font-size: 20px
 
 .navLogo
-  padding-bottom: 10px
   background: transparent
-  height: 80px
+  height: 60px
   width: auto
+  display: block
 
 .navTitle
-  padding-bottom: 10px
   background: $background-color
   color: $text-color
   font-size: 22px
+  margin: 0
 
 .wrapper
   background: $background-color
-  flex: 1
   display: flex
-  justify-content: end
-  border: none
+  justify-content: flex-end
+  align-items: center
 
 ul.tabs
   background: $background-color
   width: auto
   margin-right: $margin
   list-style: none
-  overflow: hidden
   padding: 0
   display: flex
-  align-items: flex-end
+  align-items: center
 
   li
     display: flex
     align-items: center
     background: $background-color
-    flex: auto
-    text-align: center
 
     &:not(:last-child)::after
       content: "|"
@@ -73,9 +70,9 @@ a.switch
   cursor: pointer
   text-decoration: none
   padding: 10px
-  font-size: 28px
+  font-size: 22px
   opacity: 0.8
-  transition: padding 0.2s ease, margin 0.2s ease
+  transition: opacity 0.2s ease
 
   &:hover
     opacity: 0.9
@@ -87,13 +84,21 @@ a.switch
 .hamburgerContainer
   background: transparent
   margin-right: $margin
+  display: none
 
 .hamburger
-  display: none
   background: transparent
   border: 0
   padding: 8px
   cursor: pointer
+
+  &.open
+    .hamburgerBar:nth-child(1)
+      transform: translateY(6px) rotate(45deg)
+    .hamburgerBar:nth-child(2)
+      opacity: 0
+    .hamburgerBar:nth-child(3)
+      transform: translateY(-6px) rotate(-45deg)
 
 .hamburgerBar
   display: block
@@ -104,26 +109,39 @@ a.switch
   transition: transform 0.2s ease, opacity 0.2s ease
 
 @include tablet
+  .siteHeader
+    padding: 12px
+
+  .hamburgerContainer
+    display: block
+
   .wrapper
     position: absolute
-    top: 60px
-    right: $padding
-    width: 35%
+    top: 100%
+    left: 0
+    right: 0
+    width: 100%
     background: $background-color
-    border-radius: 8px
     max-height: 0
     overflow: hidden
     transition: max-height 0.25s ease
 
-  .wrapper.open
-    max-height: 320px
+    &.open
+      max-height: 320px
 
-  .tabs
+  ul.tabs
     flex-direction: column
     width: 100%
+    margin-right: 0
 
-  .hamburger
-    display: block
+    li
+      width: 100%
+      justify-content: center
 
-  .siteHeader
-    padding: 12px
+      &:not(:last-child)::after
+        display: none
+
+  a.switch
+    width: 100%
+    text-align: center
+    padding: 12px 0

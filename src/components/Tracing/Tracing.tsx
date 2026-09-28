@@ -123,7 +123,7 @@ export const Tracing: React.FC = () => {
   );
 
   return (
-    <div className={styles.tracingContainer}>
+    <section className="content-section">
       <div className={styles.header}>
         <h2>Blockchain Tracing Tools Taxonomy</h2>
         <p>
@@ -298,7 +298,7 @@ export const Tracing: React.FC = () => {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 
