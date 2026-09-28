@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo-cryptolextracer-white.png";
+import logo from "../../assets/logo-cryptolextracer-white_bg.jpeg";
 import styles from "./Header.module.sass";
 
 const makeClass = (isActive: boolean) =>
@@ -20,6 +20,7 @@ export const Header: React.FC = () => {
     <header className={styles.siteHeader}>
       <div className={styles.brand}>
         <img src={logo} alt="CryptoLexTracer logo" className={styles.navLogo} />
+        <p className={styles.brand}>CryptoLexTracer</p>
       </div>
 
       <div className={styles.hamburgerContainer}>

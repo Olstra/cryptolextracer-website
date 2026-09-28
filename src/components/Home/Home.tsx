@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./About.module.sass";
+import styles from "./Home.module.sass";
 import {
   projectTitle,
   projectBackground,
   projectObjectives,
 } from "./projectDescriptionText";
 
-export const About: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <section className="content-section">
       <div className={styles.aboutContainer}>

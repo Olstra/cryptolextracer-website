@@ -3,7 +3,7 @@ import "./App.sass";
 import { Monitoring } from "./components/Monitoring/Monitoring.tsx";
 import { Legal } from "./components/Legal/Legal.tsx";
 import { Tracing } from "./components/Tracing/Tracing.tsx";
-import { About } from "./components/About/About.tsx";
+import { Home } from "./components/Home/Home.tsx";
 import { Footer } from "./components/Footer.tsx";
 import { Header } from "./components/Header/Header.tsx";
 import React from "react";
@@ -14,7 +14,7 @@ export const App: React.FC = () => {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Home />} />
           <Route path="/lex" element={<Legal />} />
           <Route path="/monitoring" element={<Monitoring />} />
           <Route path="/tracer" element={<Tracing />} />

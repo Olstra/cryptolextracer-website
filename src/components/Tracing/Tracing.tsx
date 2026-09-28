@@ -142,9 +142,10 @@ export const Tracing: React.FC = () => {
               )}
             </React.Fragment>
           ))}
-          <div className={styles.specialStageWrapper}>
-            {renderStageBox(ALL_IN_ONE_STAGE)}
-          </div>
+        </div>
+
+        <div className={styles.specialStageWrapper}>
+          {renderStageBox(ALL_IN_ONE_STAGE)}
         </div>
 
         <div className={styles.flowchartBottomRow}>
