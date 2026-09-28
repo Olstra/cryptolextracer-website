@@ -151,7 +151,7 @@ export const Tracing: React.FC = () => {
         <div className={styles.flowchartBottomRow}>
           <div className={styles.filterSectionGroup}>
             <div className={styles.legendBox}>
-              <span className={styles.legendTitle}>Filter by Blockchain:</span>
+              <span className={styles.legendTitle}>Filter by Blockchain Type:</span>
               <div className={styles.legendItems}>
                 <button
                   className={`${styles.legendItemButton} ${blockchainFilter === "utxo" ? styles.active : ""}`}
